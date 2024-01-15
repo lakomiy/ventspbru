@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{% block content %}
+    <section class="works">
+      <div class="container">
+        <h1>СПА/Бассейн</h1>
+        {% include 'works/list_works.html' %}
+
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/85.png" class="card-img-top" alt="1" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Банный комплекс в Сестрорецке</span
+                    >
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Приточно-вытяжная система вентиляции с рекуперацией тепла
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+
+                      90м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Подобрана и установлена приточно-вытяжная установка
+                      SystemAir с роторным рекуператором. Для экономии
+                      подпотолочного пространства помещений вся разводка
+                      воздуховодов выполнена в чердачном помещении.
+                    </p>
+                  </div>
+
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/31.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >СПА-комплекс в г. Зеленогорск
+                    </span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Вентиляция "под ключ"
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      354м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная вентиляционная установка фирмы Komfovent
+                      модель Verso-P-1200-V-HW C3.1 в комплекте с канальным
+                      осушителем OS-1200 для зоны бассейна и вентиляционная
+                      установка Domekt-R-450-V-HE для зоны отдыха.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block contact %}
+{% include 'collback.html' ignore missing with context %}
+{% endblock %}

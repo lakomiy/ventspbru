@@ -1,0 +1,400 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="main">
+    <div class="container">
+      <div class="main_block">
+        <div class="row ">
+                              <div class="col-lg-5 offset-lg-3 col-xl-5 offset-xl-0 col-xxl-5 offset-xxl-1">
+                        <div class="main_block_descr">
+                            <div class="main_block_descr_text">
+                                <h1>
+                                    Поставка, монтаж и 
+                                    <br />
+                                    сервис систем вентиляции
+                                    <br />
+                                    и кондиционирования
+                                </h1>
+                                <h2>
+                                    А также проектируем, поставляем, делаем
+                                    <br />
+                                    монтаж и обслуживаем
+                                </h2>
+                                <div class="main_block_descr_text_block2">
+                                    <ul class="intro_main__list">
+                                        <li class="intro_main__item">
+                                            <a href="/category_sort/1" class="intro_main__link">
+                                                <picture>
+                                                    <source srcset="/static/icons/main/home.svg" type="image/webp" />
+                                                    <img src="/static/icons/main/home.svg" alt="" class="intro_main__img" />
+                                                </picture>
+                                                <p class="intro_main__note">Загородные дома</p>
+                                            </a>
+                                        </li>
+                                        <li class="intro_main__item">
+                                            <a href="/category_sort/6" class="intro_main__link">
+                                                <picture>
+                                                    <source srcset="/static/icons/main/industry.svg" type="image/webp" />
+                                                    <img src="/static/icons/main/industry.svg" alt=""
+                                                        class="intro_main__img" />
+                                                </picture>
+                                                <p class="intro_main__note">Промышленные объекты</p>
+                                            </a>
+                                        </li>
+                                        <li class="intro_main__item">
+                                            <a href="/category_sort/2" class="intro_main__link">
+                                                <picture>
+                                                    <source srcset="/static/icons/main/apartament.svg" type="image/webp" />
+                                                    <img src="/static/icons/main/apartament.svg" alt=""
+                                                        class="intro_main__img" />
+                                                </picture>
+                                                <p class="intro_main__note">Частные квартиры</p>
+                                            </a>
+                                        </li>
+                                        <li class="intro_main__item">
+                                            <a href="/category_sort/3" class="intro_main__link">
+                                                <picture>
+                                                    <source srcset="/static/icons/main/Commerse.svg" type="image/webp" />
+                                                    <img src="/static/icons/main/Commerse.svg" alt=""
+                                                        class="intro_main__img" />
+                                                </picture>
+                                                <p class="intro_main__note">Коммерческие помещения</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-3 offset-sm-2 col-md-6 offset-md-3 offset-lg-4 col-xl-5 offset-xl-2 col-xxl-3 ">
+
+                            {% include 'collback.html'  %}
+                    </div>
+
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="service">
+  <div class="container">
+    <div class="service_box">
+      <div class="main_subtitle">Наши услуги</div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/1.png" class="card-img-top" alt="1" />
+          <div class="card-body">
+            <h5 class="card-title">Проектирование</h5>
+            <p class="card-text">
+              Производим расчет и проектируем по нормам и требованиям СНиП
+            </p>
+
+          </div>
+            <div class="card-footer bg-transparent ">
+                            <a href="/engineering"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/2.png" class="card-img-top" alt="2" />
+          <div class="card-body">
+            <h5 class="card-title">Кондиционирование</h5>
+            <p class="card-text">
+              Подбираем систему для Вашего объекта, учитывая Ваши пожелания
+              и возможности.
+            </p>
+
+          </div>
+            <div class="card-footer bg-transparent">
+                            <a href="/conditioning"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/3.png" class="card-img-top" alt="3" />
+          <div class="card-body">
+            <h5 class="card-title">Вентиляция</h5>
+            <p class="card-text">
+              Подбираем систему для Вашего объекта, учитывая Ваши пожелания
+              и возможности.
+            </p>
+
+          </div>
+            <div class="card-footer bg-transparent">
+                            <a href="/ventilation" class="btn btn-outline-primary btn-lg col-12">
+                                Подробнее</a>
+                        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/4.png" class="card-img-top" alt="4" />
+          <div class="card-body">
+            <h5 class="card-title">Монтаж</h5>
+            <p class="card-text">
+              Профессиональное и оперативное выполнение работ по монтажу
+              климатических систем.
+            </p>
+
+          </div>
+            <div class="card-footer bg-transparent">
+                            <a href="/mounting" class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/5.png" class="card-img-top" alt="5" />
+          <div class="card-body">
+            <h5 class="card-title">Сервисное обслуживание</h5>
+            <p class="card-text">
+              Профессиональное техническое обслуживание климатических систем
+
+            </p>
+
+
+          </div>
+             <div class="card-footer bg-transparent">
+                            <a href="/service_teh"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/static/img/uslugi/6.png" class="card-img-top" alt="6" />
+          <div class="card-body">
+            <h5 class="card-title">Оборудование</h5>
+            <p class="card-text">
+              Наша компания сотрудничает с ведущими производителями
+              климатической техники.
+            </p>
+
+          </div>
+            <div class="card-footer bg-transparent">
+                            <a href="/equipment"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+        </div>
+      </div>
+    <div class="col">
+                    <div class="card h-100">
+                        <img src="/static/img/uslugi/7.jpg" class="card-img-top" alt="7" />
+                        <div class="card-body">
+                            <h5 class="card-title">Холодильные камеры</h5>
+                            <p class="card-text">
+                                Наша компания сотрудничает с ведущими производителями
+                                климатической техники.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="/hol_cam"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+  </div>
+</section>
+
+{% include 'works.html' %}
+
+<section class="contract">
+  <div class="container">
+        <div class="row">
+
+            <div class="col-lg-7 col-xl-6   offset-xxl-1">
+          <div class="contract_block_text">
+                        Как выбрать подрядчика
+                        <br />
+                        и не потерять время и деньги?<br>
+                        <span>Оставьте заявку на консультацию и вы получите:</span>
+                        <ul>
+                            <li>Подробную консультацию</li>
+                            <li>Ответы на все ваши вопросы</li>
+                            <li>Подбор подходящей системы под ваши потребности и бюджет</li>
+                        </ul>
+                    </div>
+
+          </div>
+
+
+                    <div class="col-sm-3 offset-sm-2 col-md-6 offset-md-3 col-lg-3 offset-lg-0 col-xl-5 offset-xl-1 col-xxl-3 offset-xxl-1">
+                  {% include 'collback1.html'  %}
+{% if message %}
+                        {% include 'error/modalcallback.html' %}
+{%  endif %}
+<!--              <a href="/collback" data-bs-toggle="modal" data-bs-target="#exampleModal"-->
+<!--                class="btn btn-outline-primary btn-lg col-12">Получить консультацию</a>-->
+                    </div>
+
+        </div>
+        </div>
+  </div>
+</section>
+
+ <section class="sertificate">
+        <div class="container">
+            <h2 class="main_subtitle">Мы отвечаем за качество нашей работы</h2>
+            <div class="sertificate-slider">
+                <div class="item-img">
+                    <img src="/static/img/sertificates/DAICHI_sm.jpg" type="button" data-bs-toggle="modal"
+                        data-bs-target="#sertificatesModal" class="slider-img" wigth="500" height="300" alt="1" />
+                </div>
+                <div class="item-img">
+                    <img src="/static/img/sertificates/Dantex_sm.jpg" class="slider-img" wigth="500" height="300" type="button" data-bs-toggle="modal"
+                        data-bs-target="#sertificatesModal1" alt="2" />
+                </div>
+                <div class="item-img"><img src="/static/img/sertificates/Hisense_sm.jpg" class="slider-img" wigth="500" height="300"  type="button"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal2" alt="3" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/Hitachi_sm.jpg" class="slider-img" wigth="500" height="300" type="button"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal4" alt="4" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/LG_sm.jpg" class="slider-img" wigth="500" height="300" type="button"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal5" alt="5" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/ME_sm.jpg" class="slider-img" wigth="500" height="300" type="button"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal6" alt="6" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/Midea_sm.jpg" class="slider-img" wigth="500" height="300" type="button"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal7" alt="7" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/Royal_Clima_sm.jpg" type="button" class="slider-img" wigth="500" height="300"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal8" alt="8" /></div>
+                <div class="item-img"><img src="/static/img/sertificates/Zilon_sm.jpg" type="button" class="slider-img" wigth="500" height="300"
+                        data-bs-toggle="modal" data-bs-target="#sertificatesModal9" alt="9" /></div>
+            </div>
+
+            <div class="modal fade" id="sertificatesModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/DAICHI.jpg" alt="1" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Dantex.jpg" class="img_sert_modal" alt="2" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Hisense.jpg" class="img_sert_modal" alt="3" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Hitachi.jpg" alt="4" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/LG.jpg" alt="5" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/ME.jpg" alt="6" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Midea.jpg" alt="7" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Royal_Clima.jpg" alt="8" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sertificatesModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <img src="/static/img/sertificates/Zilon_sm.jpg" alt="9" />
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-sert d-grid gap-2 d-flex justify-content-around ">
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+ <section class="partners">
+        <div class="container">
+            <h2 class="main_subtitle">Партнёры</h2>
+            <h3>Вентиляция</h3>
+            <div class="autoplay">
+                <div class="img-slider"><img src="/static/img/partners/comfovent1.jpg" alt="1" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/3.Daikin.jpg" alt="3" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/4.royalclima.jpg" alt="4" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/5electrolux.jpg" alt="5" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/6.jpg" alt="6" class="partners__img" /></div>
+                <div class="img-slider"><img src="/static/img/partners/7.Lessar.jpg" alt="7" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/10.A-CLIMA.jpg" alt="8" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/11rosen.jpg" alt="9" class="partners__img" /></div>
+                <div class="img-slider"><img src="/static/img/partners/12.jpg" alt="10" class="partners__img" /></div>
+                <div class="img-slider"><img src="/static/img/partners/14.jpg" alt="11" class="partners__img" /></div>
+            </div>
+            <h3>Кондиционирование</h3>
+            <div class="autoplay">
+                <div class="img-slider"><img src="/static/img/partners/1.mitsubishi.jpg" alt="1" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/11greeres.jpg" alt="2" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/3.Daikin.jpg" alt="3" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/7.Lessar.jpg" alt="4" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/3.Hisense.jpg" alt="5" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/7.Pioneer.jpg" alt="6" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/6.Fujitsu.jpg" alt="7" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/4.royalclima.jpg" alt="8" class="partners__img" />
+                </div>
+                <div class="img-slider"><img src="/static/img/partners/8dantex.jpg" alt="9" class="partners__img" /></div>
+                <div class="img-slider"><img src="/static/img/partners/10har.jpg" alt="10" class="partners__img" /></div>
+                <div class="img-slider"><img src="/static/img/partners/9pan.jpg" alt="11" class="partners__img" /></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% block content %}
+    <section class="works">
+      <div class="container">
+        <h1>Офисы</h1>
+        {% include 'works/list_works.html' %}
+
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/65-.png" class="card-img-top" alt="1" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Офисное помещение. Среднеохтинский проспект
+                    </span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Кондиционирование "Под ключ"
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+
+                      300м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Кассетные сплит-системы фирмы Hisense
+                    </p>
+                  </div>
+
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/33.png" class="card-img-top" alt="2" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Офисное помещение. пос. Ольгино
+                    </span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Кондиционирование "Под ключ"
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      105м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Кассетные сплит-системы фирмы Hisense
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block contact %}
+{% include 'collback.html' ignore missing with context %}
+{% endblock %}

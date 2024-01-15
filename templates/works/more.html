@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if project %}
+{% for item in project %}
+<!--<form action="collback" enctype="multipart/form-data" method="post">-->
+    <section class="works_more">
+        <div class="container">
+		<h1>{{ item.name }}</h1>
+            <div class="works_subtext works_more_subtext"></div>
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <div class="slider-for">
+
+                        {% for image in item.img.split(' ') %}
+                         {% if image %}
+                        <img src="{{ image }}" class="" alt="1" />
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
+                    <div class="slider-nav">
+                       {% for image in item.img.split(' ') %}
+                        {% if image %}
+                        <img src="{{ image }}" class="" alt="1" />
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1 ">
+                    <div class="subject_item">
+                        <p class="more_info">
+                            <span class="subtitle_more">Задача</span><br>
+                            {{ item.tech_task }}
+                        </p>
+
+                        <p class="more_info">
+                            <span class="subtitle_more">Установлено</span><br>
+                            {{ item.body }}
+                        </p>
+                        <p class=" more_info">
+                            <span class="subtitle_more">Сфера</span><br>
+
+                                {{ item.category.name }}
+
+                        </p>
+
+                        <p class="projects_price">
+                            <span class="subtitle_more">Стоимость проекта</span><br>{{ item.price }}
+                        </p>
+
+                        <a  href="/collback"  data-bs-toggle="modal" data-bs-target="#exampleModal1" type="button"
+                            class="btn btn-outline-primary btn-lg col-12 active">Получить консультацию</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+
+                <a href="/category_sort/{{ item.category_id }}" class="btn btn-outline-primary btn-lg col-5">
+                    <svg class="project__arrow project__arrow--back" width="31" height="8" viewBox="0 0 31 8"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z"
+                            fill="#0F57C9"></path>
+                    </svg>Назад </a>
+                <a href="/show_next_project/{{ item.name }}/{{ item.category_id }}" class="btn btn-outline-primary btn-lg col-5">Следующий проект <svg
+                        class="project__arrow project__arrow--next" width="31" height="8" viewBox="0 0 31 8" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z"
+                            fill="#0F57C9"></path>
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+<!--</form>-->
+{% endfor %}
+{% endif %}
+{% endblock %}

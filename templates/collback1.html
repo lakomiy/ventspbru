@@ -1,0 +1,49 @@
+
+
+
+                    <div class="main_block_item">
+                        <div class="card big">
+                            <div class="card-body">
+                                <h5 class="card-title">Закажите бесплатную консультацию</h5>
+<form action="collback" enctype="multipart/form-data" method="post">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Как к Вам
+                                        обращаться?</label>
+                                    <input name="username" type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Ваше имя" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Введите Ваш номер
+                                        телефона</label>
+                                    <input name="phonenumber" type="text" class="form-control tel" placeholder="+7 (___) ___-__-__" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Описание
+                                        проекта</label>
+                                    <input name='short_deskription' class="form-control form-control-lg" type="text" placeholder="Описание"
+                                        aria-label="Пример .form-control-lg" />
+                                </div>
+                                <div class="form__files_tool">
+                                    <button class="btn files__counter">нет файлов</button>
+                                    <label class="form__label_file">
+                                         <input name="files" accept="*/*" type="file" class="form__input_file input--file" multiple="" />
+                                        Прикрепить файл
+                                    </label>
+                                    <div class="form__files files"></div>
+                                </div>
+                            
+				<button id="submit1" class="btn btn-outline-primary btn-lg col-12 active "  disabled>Отправить</button>
+ </form>
+                                   <div class="form__proof">
+                                       <input type="checkbox" id="policy" name="Согласие на обработку данных" value="Согласен" onchange="document.getElementById('submit1').disabled = !this.checked;">
+                                       <span class="form_confirm">Я принимаю условия
+                                            <a target="_blank" href="/privacy/"
+                                                class="projects__link form__link">политики
+                                                конфиденциальности</a></span>
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+

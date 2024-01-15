@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="works_page">
+      <div class="container">
+          {% if projects  %}
+          {% for project in projects %}
+          {% for item in project.project %}
+
+         {% if loop.index == 1 %}
+          <h1>{{ item.category.name }}</h1>
+          {% endif %}
+          {% endfor  %}
+          {% endfor  %}
+          {% endif %}
+            {% include 'works/list_works.html' %}
+
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+              {% if projects %}
+            {% for project in projects %}
+            {% for item in project.project %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{ item.img.split(' ')[0] }}" class="card-img-top" alt="1" />
+                <div  class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >{{ item.name }}</span
+                    >
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>{{ item.description }}
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+
+                      {{ item.square }}<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      {{ item.body }}
+                    </p>
+                  </div>
+                    
+                </div>
+			<div class="card-footer bg-transparent ">
+                            <a href="/more/{{ item.name }}"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+              </div>
+            </div>
+ {% endfor %}
+        {% endfor %}
+        {% endif %}
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+{% endblock %}

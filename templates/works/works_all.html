@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="works_page">
+      <div class="container">
+        <h1>Все проекты</h1>
+        {% include 'works/list_works.html' %}
+
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+              {% if projects %}
+        {% for project in projects %}
+            <div class="col">
+
+              <div class="card h-100">
+
+                <img src="{{ project.img.split(' ')[0] }}" class="card-img-top" alt="1" />
+                <div  class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >{{ project.name }}</span
+                    >
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>{{ project.description }}
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+
+                      {{ project.square }}<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      {{ project.body }}
+                    </p>
+                  </div>
+                    
+                </div>
+			<div class="card-footer bg-transparent ">
+                            <a href="more/{{ project.name }}"
+                                class="btn btn-outline-primary btn-lg col-12">Подробнее</a>
+                        </div>
+
+              </div>
+
+            </div>
+{% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+{% endblock %}

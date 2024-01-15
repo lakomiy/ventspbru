@@ -1,0 +1,126 @@
+{% extends 'admin/admin.html' %}
+
+{% block content %}
+<div class="admin_pages">
+{% if categorys %}
+{% for project in projects %}
+
+<div class="container">
+<div class="name">
+    <div class="name2">
+          <div  class="works_btn_line">
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-lg col-12"
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            >{{ project.name }}</a>
+
+        </div>
+
+    </div>
+    <div class="name2">
+<div  class="works_btn_line">
+    <form action="delproject/{{ project.name }}" enctype="" method="post">
+<input type="submit" class="btn btn-outline-primary btn-lg col-12 btn_del active" value="Удалить" onclick="return confirmation()"/>
+</form>
+</div>
+</div>
+    </div>
+    </div>
+{% endfor %}
+{% endif %}
+
+<div class="container">
+<h3>Добавление проекта</h3>
+ <form action="projects" enctype="multipart/form-data" method="post">
+     <label for="avatar">Выбирете файл для загрузки</label>
+     <input
+       id="avatar" name="img"
+       accept="image/png, image/jpeg"  type="file" multiple/>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                      Название проекта</label>
+                  <input name="name"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Краткое описание
+                  </label>
+                  <input name="description"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div>
+                 <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Техническое задание
+                  </label>
+                  <input name="tech_task"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div> <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Площадь
+                  </label>
+                  <input name="square"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div> <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Содержание
+                  </label>
+                  <input name="body"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Цена
+                  </label>
+                  <input name="price"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="введите текст"/>
+                </div>
+      <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Категория
+                  </label>
+          <select name="category">
+                  {% for category in categorys  %}
+              <option value='{{ category.name }}'>{{ category.name }}</option>
+
+              {% endfor %}
+          </select>
+                </div>
+
+                 <input
+                  type="submit"
+                  class="btn btn-outline-primary btn-lg col-12" value="Создать запись" />
+                 </form>
+
+</div>
+
+</div>
+<script type="text/javascript">
+  function confirmation() {
+    return confirm('Удалить?');
+  }
+</script>
+{% endblock %}
+

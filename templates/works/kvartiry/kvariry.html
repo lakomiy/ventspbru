@@ -1,0 +1,132 @@
+{% extends 'base.html'%}
+{% block content %}
+    <section class="works">
+      <div class="container">
+        <h1>Квартиры</h1>
+        {% include 'works/list_works.html' %}
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/80.png" class="card-img-top" alt="3" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header">Квартира. ЖК «Ботаника»</span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Канальная система кондиционирования на основе фанкойлов
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      72м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Установлены канальные фанкойлы фирмы Carrier в ванной
+                      комнате и гардеробе. Таким образом опуск потолков в жилых
+                      комнатах отсутствует. Вся разводка воздуховодов выполнена
+                      по сан.узлам и гардеробу.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/72.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Квартира. Московский пр. 153</span
+                    >
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Приточно-вытяжная система вентиляции с рекуперацией тепла
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      89м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная система вентиляции с пластинчатым
+                      рекуператором фирмы Turkov, которая была установлена во
+                      встроенный шкаф. В холле разводка была выполнена
+                      прямоугольными воздуховодами, для того чтобы не занижать
+                      слишком сильно потолки. Опуск потолков составил всего
+                      10см.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/34.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header">Квартира. Заневский пр.</span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Канальная система кондиционирования на основе фанкойлов
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      90м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная вентиляционная установка фирмы Komfovent
+                      модель Domekt-R-450-V с электрическим нагревателем.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/32.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Квартира: ЖК «Премьер Палас» Пионерская ул., д.50</span
+                    >
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Канальная система кондиционирования на основе фанкойлов
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      157м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная вентиляционная установка фирмы Komfovent
+                      модель Domekt-R-700-H с электрическим нагревателем,
+                      осушитель фирмы Carel и мульти-сплит система
+                      кондиционирования фирмы Mitsubishi Electric
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block contact %}
+{% include 'collback.html' ignore missing with context %}
+{% endblock %}

@@ -1,0 +1,74 @@
+<section class="works">
+  <div class="container">
+    <div class="main_subtitle">Наши работы</div>
+    <div id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel">
+<!--        <div class="carousel-indicators">-->
+<!--         {% for work in works %}-->
+<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ loop.index }}" class="active" aria-current="true"  aria-label="Slide {{ loop.index }}"></button>-->
+<!--    {% endfor %}-->
+<!--  </div>-->
+
+
+      <div class="carousel-inner">
+        {% for work in works %}
+        <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
+          <div class="row justify-content-center">
+              <div class="col-md-9 col-lg-9 col-xl-5">
+                <img src="{{ work.img.split(' ')[0] }}" class="" alt="not found" />
+              </div>
+            <div class="col-md-10 col-lg-9 offset-lg-0 col-xl-4">
+            <span class="projects_header">{{ work.name }}</span>
+              <p class="projects_info">
+                <span class="projects_subtitle">Проект:</span>
+                {{ work.description }}
+              </p>
+               <p class="projects_info">
+                <span class="projects_subtitle">Площадь:</span>
+
+                {{ work.square }}м<sup>2</sup>
+              </p>
+              <p class="projects_info">
+                <span class="projects_subtitle">Установлено:</span>
+                {{ work.body }}
+              </p>
+              <p class="projects_price">
+                <span class="projects_subtitle"
+                  >Итоговая стоимость по договору:</span
+                >{{ work.price }}.
+              </p>
+
+              <a href="/more/{{ work.name }}" class="btn btn-outline-primary btn-lg col-12"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+      </div>
+  </div>
+</section>

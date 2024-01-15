@@ -1,0 +1,97 @@
+{% extends 'base.html'%}
+{% block content %}
+    <section class="works">
+      <div class="container">
+        <h1>Дома</h1>
+        {% include 'works/list_works.html' %}
+        <div class="works_items">
+          <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/81.png" class="card-img-top" alt="2" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header">Дом в Ропше</span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Вытяжная система вентиляции
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      105м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Канальное вентиляционное оборудование немецкой фирмы Ruck.
+                      Для экономии подпотолочного пространства помещений вся
+                      разводка воздуховодов выполнена в чердачном помещении.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/35.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header"
+                      >Дом Петергоф, ул. Ботаническая
+                    </span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Вентиляция "Под ключ"
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      185м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная установка фирмы Royal Clima модель RCS
+                      950 с электрическим нагревателем.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="height: 44rem">
+                <img src="/static/img/works/img/36.png" class="card-img-top" alt="4" />
+                <div class="card-body">
+                  <div class="card_telo">
+                    <span class="projects_header">Дом Заневский пр.</span>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Проект:</span>
+                      Вентиляция "Под ключ"
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Площадь:</span>
+                      167м<sup>2</sup>
+                    </p>
+                    <p class="projects_info">
+                      <span class="projects_subtitle">Установлено:</span>
+                      Приточно-вытяжная вентиляционная установка фирмы Komfovent
+                      модель Domekt-R-600-H с водяным нагревателем.
+                    </p>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary btn-lg col-12"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block contact %}
+{% include 'collback.html' ignore missing with context %}
+{% endblock %}

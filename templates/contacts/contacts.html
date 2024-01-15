@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="about">
+      <div class="container">
+        <h1>Наши контакты</h1>
+        <div class="about_wallpapper">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <ul>
+                <li>
+                  Телефон:<br />
+                  <span class="number"> +7 (993) 9704565</span>
+                </li>
+                <li>
+                  Пн – Сб<br />
+                  c 9:00 до 20:00
+                </li>
+                <li>
+                  Адрес:<br />
+
+                  переулок Ульяны Громовой, 4 ЛИТЕР А, ОФИС 6Н
+                </li>
+                <li>
+                  Email:<br />
+
+                  Info@vent.spb.ru
+                </li>
+                <li>
+                  ООО «ВЕНТИКО»<br />
+
+                  Юридический адрес:<br />
+                  191036, г Санкт-Петербург, переулок Ульяны Громовой, 4 ЛИТЕР А, ОФИС 6Н
+                  ИНН 7842456580 / КПП 784201001 <br/>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+             {% include 'collback.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A839d1a20c9d8f1ff749c6bea672b23c0e01aa87ec8c17217e9def1ca69586fb5&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+
+      </div>
+    </section>
+{% endblock %}

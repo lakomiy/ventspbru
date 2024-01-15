@@ -1,0 +1,22 @@
+        <div class="works_btn_line">
+          <a
+            href="/works_all"
+	    class="btn btn-outline-primary  works_button col-12 col-md-2 "
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            >Все проекты</a
+          >
+            {% if works %}
+            {% for work in works %}
+          <a
+            href="/category_sort/{{ work.id }}"
+	    class="btn btn-outline-primary  works_button col-12 col-md-2 "
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            >{{ work.name }}</a
+          >
+        {% endfor %}
+            {% endif %}
+        </div>

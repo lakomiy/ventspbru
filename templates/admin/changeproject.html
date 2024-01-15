@@ -1,0 +1,110 @@
+{% extends 'admin/admin.html' %}
+
+{% block content %}
+<div class="admin_pages">
+<div class="container">
+
+<h3>Редактирование проекта {{ project.name }}</h3>
+ <form action="/changeproject/{{ project.id }}" enctype="multipart/form-data" method="post">
+     <label for="avatar">Выбирете файл для загрузки</label>
+     <input
+       id="avatar" name="img"
+       accept="image/png, image/jpeg,image/jpg, "  type="file" multiple/>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                      Название проекта</label>
+                  <input name="name"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                     value="{{ project.name }}"
+                    />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Краткое описание
+                  </label>
+                  <input name="description"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                         value="{{ project.description }}"
+                    />
+                </div>
+                 <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Техническое задание
+                  </label>
+                  <input name="tech_task"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                         value="{{ project.tech_task }}"
+                    />
+                </div> <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Площадь
+                  </label>
+                  <input name="square"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+
+                         value="{{ project.square }}"
+
+                    />
+                </div> <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                    Содержание
+                  </label>
+                  <input name="body"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                         value="{{ project.body }}"
+                    />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Цена
+                  </label>
+                  <input name="price"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                         value="{{ project.price }}"
+                    />
+                    {% for item in project.img.split() %}
+                                        <input name="change_img"
+                                        type="text"
+                                        class="form-control"
+
+
+                                             value="{{ item }}"
+                                        />
+                    <img src="{{ item }}"  alt="1"  style="width: 97px;" tabindex="-1">
+                        {%  endfor %}
+                </div>
+
+      <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">
+                   Категория
+                  </label>
+          <select name="category">
+                  {% for category in categorys  %}
+              <option value='{{ category.id }}'>{{ category.name }}</option>
+
+              {% endfor %}
+          </select>
+                </div>
+
+                 <input
+                  type="submit"
+                  class="btn btn-outline-primary btn-lg col-12" value="Изменить {{ project.name }}" />
+ </form>
+
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'admin/admin.html' %}
+
+{% block content %}
+
+{% if callback_all %}
+{% for callback in callback_all %}
+<div class="admin_pages">
+<div class="container">
+<div class="name">
+    <div class="name2">
+          <div  class="works_btn_line">
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-lg col-2"
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            >{{ callback.username }}</a>
+
+        </div>
+<div  class="works_btn_line">
+          <a
+            href="tel:{{ callback.phonenumber }}"
+            class="btn btn-outline-primary btn-lg col-2"
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            >{{ callback.phonenumber }}</a>
+
+        </div>
+
+        <div  class="works_btn_line">
+        {% if callback.short_deskription %}
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-lg col-2"
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+
+            >{{ callback.short_deskription }}</a>
+            {% endif %}
+          {% if callback.files %}
+            {% for file1 in callback.files.split() %}
+            <form action="/download_files" method="get" >
+            <input id='files' type="submit" name="file" class="btn btn-outline-primary btn-lg col-12 " value="{{ file1 }}" />
+                 </form>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+    <div class="name2">
+<div  class="works_btn_line">
+    <form action="/del_callback_row/{{ callback.id }}"  method="post">
+<input type="submit" class="btn btn-outline-primary btn-lg col-12 active" value="Удалить"/>
+</form>
+
+</div>
+    </div>
+    </div>
+{% endfor %}
+{% else %}
+<div class="admin_pages">
+	<div class="container">
+		<p>Заявок нет</p>
+			{% endif %}
+	</div>
+</div>
+</div>
+</div>
+{% endblock %}

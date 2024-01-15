@@ -1,0 +1,75 @@
+<div class="main_block_item">
+    <div class="card big">
+        <div class="card-body">
+            <h5 class="card-title">Закажите бесплатную консультацию</h5>
+<form name="myForm" action="collback" enctype="multipart/form-data" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Как к Вам
+                    обращаться?</label>
+                <input name="username" type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Ваше имя" />
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Введите Ваш номер
+                    телефона</label>
+                <input name="phonenumber" type="text" class="form-control tel" placeholder="+7 (___) ___-__-__" />
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Описание
+                    проекта</label>
+                <input name='short_deskription' class="form-control form-control-lg" type="text" placeholder="Описание"
+                    aria-label="Пример .form-control-lg" />
+            </div>
+            <div class="form__files_tool">
+                <button class="btn files__counter">нет файлов</button>
+                <label class="form__label_file">
+                     <input name="files" accept="*/*" type="file" class="form__input_file input--file" multiple="" />
+                    Прикрепить файл
+                </label>
+                <div class="form__files files"></div>
+            </div>
+
+<button data-bs-toggle="modal" data-bs-target="#callbackModal" id="submit" class="btn btn-outline-primary btn-lg col-12 active "   disabled>Отправить</button>
+</form>
+               <div class="form__proof">
+                   <input type="checkbox" id="policy" name="Согласие на обработку данных" value="Согласен" onchange="document.getElementById('submit').disabled = !this.checked;">
+                   <span class="form_confirm">Я принимаю условия
+                        <a target="_blank" href="/privacy/"
+                            class="projects__link form__link">политики
+                            конфиденциальности</a></span>
+              </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body" style="text-align: center">
+        <h5 class="modal-title"  id="exampleModalLabel">Ваша заявка принята!</h5>
+        {{ message }}
+      </div>
+      <div class="modal-footer" style="justify-content: center">
+            <img class="menu_logo_icons" src="/static/icons/logo6.png" alt="logo">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["username"].value;
+    if (x == "") {
+        alert("Необходимо ввести имя");
+        return false;
+    }
+}
+</script>
